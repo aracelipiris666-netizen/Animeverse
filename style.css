@@ -1,0 +1,221 @@
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0B090C;
+    color: #FFF4F8;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+}
+
+/* ENCABEZADO */
+
+header {
+    background: linear-gradient(135deg, #171319, #301322);
+    text-align: center;
+    padding: 45px 20px;
+    border-bottom: 2px solid #F2A1C1;
+}
+
+header h1 {
+    color: #F2A1C1;
+    font-size: 3rem;
+    letter-spacing: 5px;
+    text-shadow: 0 0 15px #FF4F9A;
+}
+
+header p {
+    color: #FFF4F8;
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+/* BARRA DE NAVEGACIÓN */
+
+nav {
+    background-color: #171319;
+    padding: 18px;
+    text-align: center;
+    border-bottom: 1px solid #49303D;
+}
+
+nav a {
+    color: #F2A1C1;
+    text-decoration: none;
+    margin: 0 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #FFFFFF;
+}
+
+/* CONTENIDO PRINCIPAL */
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+h2 {
+    color: #F2A1C1;
+    margin-bottom: 15px;
+    border-left: 4px solid #FF4F9A;
+    padding-left: 12px;
+}
+
+h3 {
+    color: #FFFFFF;
+    margin-bottom: 8px;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+/* ANIME DESTACADO */
+
+#destacado {
+    background: linear-gradient(135deg, #24141F, #171319);
+    border: 1px solid #F2A1C1;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 0 18px #F2A1C122;
+}
+
+#destacado h2 {
+    border-left: none;
+    padding-left: 0;
+}
+
+#destacado h3 {
+    color: #FF8DBB;
+    font-size: 1.6rem;
+}
+
+/* IMAGEN DESTACADA */
+
+.imagen-destacada {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    margin: 15px 0;
+    border-radius: 10px;
+    border: 1px solid #F2A1C1;
+}
+
+/* CATÁLOGO DE ANIMES */
+
+#catalogo {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+#catalogo > h2,
+#catalogo > p {
+    grid-column: 1 / -1;
+}
+
+/* TARJETAS DE ANIMES */
+
+.anime {
+    background-color: #171319;
+    border: 1px solid #49303D;
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.anime h3 {
+    color: #F2A1C1;
+}
+
+.anime:hover {
+    transform: translateY(-5px);
+    border-color: #F2A1C1;
+}
+
+/* IMÁGENES DEL CATÁLOGO */
+
+.imagen-anime {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #49303D;
+}
+
+/* GÉNEROS Y SOBRE NOSOTROS */
+
+#generos,
+#sobre-nosotros {
+    background-color: #171319;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #49303D;
+}
+
+#generos p {
+    color: #F2A1C1;
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    background-color: #171319;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    border-top: 2px solid #F2A1C1;
+    color: #F2A1C1;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 8px;
+    }
+
+    #catalogo {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 20px 15px;
+    }
+
+    .imagen-destacada {
+        height: auto;
+        max-width: 100%;
+    }
+
+}
